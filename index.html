@@ -1,27 +1,124 @@
-<html>
-  <!DOCTYPE html>
-  <html lang="fr">
-  <!-- métadonnées-->
-  <head>
-    <title> le site de Nina </title>
-    <meta charset="UTF-8">
-    <script src="script.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-  </head>
+<!-- le DOCTYPE doit être en commentaire uniquement sur stackblitz -->
+<!-- <!DOCTYPE html> -->
+<html lang="fr">
 
-  <!-- contenu -->
-  <body>
-    <h1>Cours Wep</h1>
-    <h2>Les balises</h2>
-      <ul>
-      <li>Puce</li>
-      </ul>
+<head>
+	<title>Carthageo - Exercice 4</title>
+	<meta name="description" content="Première page web">
+	<meta charset="UTF-8" />
+	<style>
+		header {
+			background-color: orange;
+			color: #332233;
+		}
 
-      <ol>
-      <li>Puces</li>
-      </ol>
+		footer {
+			background-color: #000;
+			color: #fff;
+		}
 
+		.contenu {
+			border-bottom: 2px solid black;
+		}
 
-    <a href="/me.html">My other page</a>
-  </body>
+		.red {
+			border-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>
+			<a href="../index.html">Carthageo 2020</a>
+		</h1>
+		<h2>Exercice 4</h2>
+	</header>
+
+	<div id="menu" class="contenu">
+		<ul>
+			<li class="menu-item">Le programme</li>
+			<li class="menu-item"><a href="#prof">Les intervants</a></li>
+			<li class="menu-item">Les étudiants</li>
+			<li class="menu-item"><a href="#form">Formulaire</a></li>
+		</ul>
+	</div>
+
+	<div class="contenu red">
+		<h4>Le programme du cours :</h4>
+		<ol>
+			<li>Les bases du web</li>
+			<li>HTML
+				<ul>
+					<li>Principes</li>
+					<li>Les balises (en cours)</li>
+				</ul>
+			</li>
+			<li>CSS (à venir)</li>
+		</ol>
+	</div>
+
+	<div class="contenu" id="prof">
+		<h4>Les intervenants</h4>
+		<p>"🎼Bonjour, je me présente, je m'appelle Clément 🎼"</p>
+	</div>
+
+	<div class="contenu">
+		<h4>Les étudiants</h4>
+		<p>
+			Ils sont très patient jusqu'ici.
+		</p>
+		<p>
+			Le cours est disponible en ligne
+			<a href="https://ensg_dei.gitlab.io/web-az/html/balises/" title="lien vers le cours">
+				ici
+			</a>
+		</p>
+	</div>
+
+	<h4>Formulaire</h4>
+	<form action="#" method="get">
+		<h5>Informations personnelles</h5>
+		<p>
+			<label>nom: <input type="text" name="nom"></label>
+		</p>
+		<p>
+			<label>prenom: <input type="text" name="prenom"></label>
+		</p>
+		<label>
+      Tranche d'âge:
+      <select name="age">
+        <option value="20">0 à 20 ans</option>
+        <option value="40" selected>21 à 40 ans</option>
+        <option value="60">41 à 60 ans</option>
+        <option value="80">61 à 80 ans</option>
+      </select>
+    </label>
+		<h5>Compte à créer</h5>
+		<p>
+			<label>Username: <input type="text" name="username"></label>
+		</p>
+		<p>
+			<label>Mot de passe: <input type="password" name="password"></label>
+		</p>
+		<p>
+			S'abonner à la new letters :
+			<label>Oui<input type="radio" name="ouinon" value="1"></label>
+			<label>Non<input type="radio" name="ouinon" value="0"></label>
+		</p>
+		<input type="submit" value="Ok">
+  </form>
+
+		<footer>
+			<table>
+				<tr>
+					<td>Réalisé par Clément Bouché</td>
+					<td>@Carthagéo</td>
+					<td>2020</td>
+				</tr>
+			</table>
+		</footer>
+
+</body>
+
 </html>
